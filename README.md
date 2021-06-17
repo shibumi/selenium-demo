@@ -14,4 +14,4 @@ Note: You need the `geckodriver` for Firefox in your PATH.
 
 ## What is this doing?
 
-This project takes a few demo users on `https://www.saucedemo.com/"` and checks if the login works as expected.
+This project takes a few demo users on https://www.saucedemo.com/ and checks if the login works as expected.
