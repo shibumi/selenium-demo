@@ -1,6 +1,4 @@
-import time
 import unittest
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -47,7 +45,7 @@ class TestMain(unittest.TestCase):
 
     def test_connection(self):
         expected = "Swag Labs"
-        if self.browser.title != "Swag Labs":
+        if self.browser.title != expected:
             print("Title is invalid")
             return False
         return True
