@@ -7,8 +7,9 @@ class TestMain(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        cls.base_url = "https://www.saucedemo.com/"
         cls.browser = webdriver.Firefox()
-        cls.browser.get("https://www.saucedemo.com/")
+        cls.browser.get(cls.base_url)
         cls.password = "secret_sauce" # one password for all users
         cls.valid_users = ["standard_user", "problem_user", "performance_glitch_user"]
         cls.invalid_users = ["locked_out_user"]
@@ -41,9 +42,9 @@ class TestMain(unittest.TestCase):
                 # if we accidently login logout
                 if self.valid_url in self.browser.current_url:
                     self.helper_logout()
-                self.browser.get("https://www.saucedemo.com/")
+                self.browser.get(self.base_url)
                 return False
-            self.browser.get("https://www.saucedemo.com/")
+            self.browser.get(self.base_url)
 
     def test_connection(self):
         expected = "Swag Labs"
