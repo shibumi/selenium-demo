@@ -41,7 +41,9 @@ class TestMain(unittest.TestCase):
                 # if we accidently login logout
                 if self.valid_url in self.browser.current_url:
                     self.helper_logout()
+                self.browser.get("https://www.saucedemo.com/")
                 return False
+            self.browser.get("https://www.saucedemo.com/")
 
     def test_connection(self):
         expected = "Swag Labs"
